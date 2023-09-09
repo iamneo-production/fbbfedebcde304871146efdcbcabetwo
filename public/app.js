@@ -64,6 +64,10 @@ const resetGame = (f) => {
     }
 };
 
+const ticTac = (element, index) => {
+    console.log("Hello");
+};
+
 btns.forEach((btn, i) => {
     btn.addEventListener('click', () => ticTacToe(btn, i));
 });
@@ -71,17 +75,24 @@ btns.forEach((btn, i) => {
 document.querySelector('#reset').addEventListener('click', resetGame(2));
 
 
-function btn() {
-    
+function btn(cellsnumber) {
+    if(cells[cellsnumber] == '') {
+        cells[cellsnumber] = currentPlayer;
+        e = "btn" + (cellsnumber+1);
+        document.getElementById(e).value = currentPlayer;
+        document.getElementById(e).classList.add("btndis");
+        changecurrentPlayer();
+        ticTacToe(currentPlayer, cellsnumber);
+    }
 }
-
+/*
 function btn1() {
     if(cells[0] == '') {
         cells[0] = currentPlayer;
         document.getElementById("btn1").value = currentPlayer;
         document.getElementById("btn1").classList.add("btndis");
         changecurrentPlayer();
-        ticTacToe();
+        ticTacToe(currentPlayer, cellsnumber);
         
     }
 }
@@ -91,7 +102,7 @@ function btn2() {
         document.getElementById("btn2").value = currentPlayer;
         document.getElementById("btn2").classList.add("btndis");
         changecurrentPlayer();
-        ticTacToe();
+        ticTacToe(currentPlayer, cellsnumber);
     }
 }
 function btn3() {
@@ -100,7 +111,7 @@ function btn3() {
         document.getElementById("btn3").value = currentPlayer;
         document.getElementById("btn3").classList.add("btndis");
         changecurrentPlayer();
-        ticTacToe();
+        ticTacToe(currentPlayer, cellsnumber);
     }
 }
 function btn4() {
@@ -109,7 +120,7 @@ function btn4() {
         document.getElementById("btn4").value = currentPlayer;
         document.getElementById("btn4").classList.add("btndis");
         changecurrentPlayer();
-        ticTacToe();
+        ticTacToe(currentPlayer, cellsnumber);
     }
 }
 function btn5() {
@@ -118,7 +129,7 @@ function btn5() {
         document.getElementById("btn5").value = currentPlayer;
         document.getElementById("btn5").classList.add("btndis");
         changecurrentPlayer();
-        ticTacToe();
+        ticTacToe(currentPlayer, cellsnumber);
     }
 }
 function btn6() {
@@ -127,7 +138,7 @@ function btn6() {
         document.getElementById("btn6").value = currentPlayer;
         document.getElementById("btn6").classList.add("btndis");
         changecurrentPlayer();
-        ticTacToe();
+        ticTacToe(currentPlayer, cellsnumber);
     }
 }
 function btn7() {
@@ -136,7 +147,7 @@ function btn7() {
         document.getElementById("btn7").value = currentPlayer;
         document.getElementById("btn7").classList.add("btndis");
         changecurrentPlayer();
-        ticTacToe();
+        ticTacToe(currentPlayer, cellsnumber);
     }
 }
 function btn8() {
@@ -145,7 +156,7 @@ function btn8() {
         document.getElementById("btn8").value = currentPlayer;
         document.getElementById("btn8").classList.add("btndis");
         changecurrentPlayer();
-        ticTacToe();
+        ticTacToe(currentPlayer, cellsnumber);
     }
 }
 function btn9() {
@@ -154,7 +165,8 @@ function btn9() {
         document.getElementById("btn9").value = currentPlayer;
         document.getElementById("btn9").classList.add("btndis");
         changecurrentPlayer();
-        ticTacToe();
+        ticTacToe(currentPlayer, cellsnumber);
     }
 }
 
+*/
