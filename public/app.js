@@ -1,4 +1,3 @@
-// Initial game state
 let cells = ['', '', '', '', '', '', '', '', ''];
 let currentPlayer = 'X';
 let result = document.querySelector('.result');
@@ -13,9 +12,7 @@ let conditions = [
     [0, 4, 8],
     [2, 4, 6]
 ];
-console.log(btns);
 
-console.log(document.getElementById("result"));
 function resetGame(f) {
     if(f==1) {
         for(let i = 0; i<9; i++) {
