@@ -2,8 +2,9 @@
 let cells = ['', '', '', '', '', '', '', '', ''];
 let currentPlayer = 'X';
 let result = document.querySelector('.result');
-let btns = document.querySelectorAll('.btn');
+let btns = document.getElementsByClassName('btn');
 
+console.log(btns);
 
 document.getElementById("result").innerText = "Player X turn";
 console.log(document.getElementById("result"));
@@ -40,8 +41,21 @@ const ticTacToe = (element, index) => {
             }
         }
     }
-};
+};*/
 
+function ticTacToe(element, index) {
+    for (const cond of conditions) {
+        const [a, b, c] = cond;
+        if (cells[a] && cells[a] === cells[b] && cells[a] === cells[c]) {
+            if(cells[a] == "X" || cells[a] == "O"){
+                changecurrentPlayer();
+                document.getElementById("result").innerText = "Player " + currentPlayer + " wins!";
+                console.log(cells[a]);
+                blockall(1);
+            }
+        }
+    }
+};
 
 const resetGame = (f) => {
     if(f==1) {
@@ -64,12 +78,12 @@ const resetGame = (f) => {
     }
 };
 
-const ticTac = (element, index) => {
+const ticTac = () => {
     console.log("Hello");
 };
 
 btns.forEach((btn, i) => {
-    btn.addEventListener('click', () => ticTacToe(btn, i));
+    btn.addEventListener('click', () => ticTac());
 });
 
 document.querySelector('#reset').addEventListener('click', resetGame(2));
