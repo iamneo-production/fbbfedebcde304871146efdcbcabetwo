@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tic_tac_toe</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <h1>Tic Tac Toe</h1>
+  <div class="box">
+    <div class="row">
+      <input type="button" class="btn" id="btn1" onclick="btn1()">
+      <input type="button" class="btn" id="btn2" onclick="btn2()">
+      <input type="button" class="btn" id="btn3" onclick="btn3()">
+    </div>
+    <div class="row">
+      <input type="button" class="btn" id="btn4" onclick="btn4()">
+      <input type="button" class="btn" id="btn5" onclick="btn5()">
+      <input type="button" class="btn" id="btn6" onclick="btn6()">
+    </div>
+    <div class="row">
+      <input type="button" class="btn" id="btn7" onclick="btn7()">
+      <input type="button" class="btn" id="btn8" onclick="btn8()">
+      <input type="button" class="btn" id="btn9" onclick="btn9()">
+    </div>
+  </div>
+  <div class="result-container">
+    <p id="result">Player X turn</p>
+  </div>
+  <div class="reset-container">
+    <button id="reset" onclick="blockall(2)">Reset</button>
+  </div>
+</body>
+
+</html>
